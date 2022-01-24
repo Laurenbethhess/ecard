@@ -1,12 +1,88 @@
 .happy_birthday {
   background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   background-size: 1500px;
+  background-repeat: no-repeat;
   width: 1440px;
   height: 750px;
   left: 0px;
   top: 0px;
-  border: 1px solid #000000;
-  box-sizing: border-box; 
+  position: absolute;
+}
+
+.happy_birthday_thumb {
+  background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 100px;
+  top: 150px;
+  position: absolute;
+}
+
+.congrats {
+  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.congrats_thumb {
+  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 750px;
+  top: 150px;
+  position: absolute;
+}
+
+.get_well {
+  background-image: url("https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.get_well_thumb {
+  background-image: url("https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 100px;
+  top: 525px;
+  position: absolute;
+}
+
+.love {
+  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.love_thumb {
+  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 750px;
+  top: 525px;
   position: absolute;
 }
 
@@ -17,4 +93,117 @@
   padding-top: 100px;
   font-family: cursive;
   font-weight: bold;
+}
+
+.nav_rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  opacity: 0.5;
+  background: #FAFCAF;
+}
+
+.e_card {
+  position: absolute;
+  width: 231px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.logout_button {
+  position: absolute;
+  width: 231px;
+  height: 70px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 69px;
+  text-align: center;
+  color: #000000;  
+  left: 250px;
+  text-align: center;
+  color: #000000;
+  cursor:pointer;
+  border-style: solid;
+  border-color: #000000;
+}
+
+.welcome {
+  position: absolute;
+  width: 231px;
+  height: 50px;
+  left: 1100px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.form_link {
+  position: absolute;
+  width: 149px;
+  height: 46px;
+  left: 900px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.my_cards_link {
+  position: absolute;
+  width: 149px;
+  height: 46px;
+  left: 700px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.home_link {
+  position: absolute;
+  width: 149px;
+  height: 46px;
+  left: 500px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.form {
+  width: 1440px;
+  height: 750px;
+  left: 100px;
+  top: 150px;
+  position: absolute;
 }
