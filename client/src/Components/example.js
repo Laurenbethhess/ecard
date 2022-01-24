@@ -35,7 +35,6 @@ function App() {
         <div>{card.message}</div>
         <div>{card.closing}, {user.first_name}</div>   
       </div>
-
     </div>
   );
 }

@@ -3,10 +3,10 @@
   background-size: 1500px;
   background-repeat: no-repeat;
   width: 1440px;
-  height: 750px;
+  height: 1000px;
   left: 0px;
   top: 0px;
-  position: absolute;
+  color: white;
 }
 
 .happy_birthday_thumb {
@@ -25,10 +25,10 @@
   background-size: 1500px;
   background-repeat: no-repeat;
   width: 1440px;
-  height: 750px;
+  height: 1000px;
   left: 0px;
   top: 0px;
-  position: absolute;
+  color: white;
 }
 
 .congrats_thumb {
@@ -37,7 +37,7 @@
   background-repeat: no-repeat;
   width: 1440px;
   height: 750px;
-  left: 750px;
+  left: 800px;
   top: 150px;
   position: absolute;
 }
@@ -47,10 +47,10 @@
   background-size: 1500px;
   background-repeat: no-repeat;
   width: 1440px;
-  height: 750px;
+  height: 1000px;
   left: 0px;
   top: 0px;
-  position: absolute;
+  color: white;
 }
 
 .get_well_thumb {
@@ -69,10 +69,10 @@
   background-size: 1500px;
   background-repeat: no-repeat;
   width: 1440px;
-  height: 750px;
+  height: 1500px;
   left: 0px;
   top: 0px;
-  position: absolute;
+  color: white;
 }
 
 .love_thumb {
@@ -81,7 +81,7 @@
   background-repeat: no-repeat;
   width: 1440px;
   height: 750px;
-  left: 750px;
+  left: 800px;
   top: 525px;
   position: absolute;
 }
@@ -111,10 +111,10 @@
   height: 50px;
   left: 0px;
   top: 0px;
-  font-family: Roboto;
+  font-family: cursive;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 30px;
   line-height: 75px;
   text-align: center;
   color: #000000;  
@@ -122,31 +122,32 @@
 
 .logout_button {
   position: absolute;
-  width: 231px;
-  height: 70px;
+  width: 100px;
+  height: 75px;
   top: 0px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 30px;
   line-height: 69px;
   text-align: center;
   color: #000000;  
-  left: 250px;
+  left: 1300px;
   text-align: center;
   color: #000000;
   cursor:pointer;
   border-style: solid;
   border-color: #000000;
+  border-radius: 5pt;
 }
 
 .welcome {
   position: absolute;
   width: 231px;
   height: 50px;
-  left: 1100px;
+  left: 1060px;
   top: 0px;
-  font-family: Roboto;
+  font-family: cursive;
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
@@ -157,14 +158,12 @@
 
 .form_link {
   position: absolute;
-  width: 149px;
-  height: 46px;
-  left: 900px;
+  left: 825px;
   top: 0px;
-  font-family: Roboto;
+  font-family: courier;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 75px;
   text-align: center;
   color: #000000;  
@@ -172,14 +171,12 @@
 
 .my_cards_link {
   position: absolute;
-  width: 149px;
-  height: 46px;
-  left: 700px;
+  left: 600px;
   top: 0px;
-  font-family: Roboto;
+  font-family: courier;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 75px;
   text-align: center;
   color: #000000;  
@@ -187,23 +184,55 @@
 
 .home_link {
   position: absolute;
-  width: 149px;
-  height: 46px;
-  left: 500px;
+  left: 450px;
   top: 0px;
-  font-family: Roboto;
+  font-family: courier;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 75px;
   text-align: center;
-  color: #000000;  
+  color: #000000;
 }
 
 .form {
   width: 1440px;
   height: 750px;
-  left: 100px;
-  top: 150px;
+  left: 200px;
+  top: 25px;
   position: absolute;
+}
+
+.message {
+  width: 200px;
+  height: 100px;
+}
+
+.render_cards {
+  padding-top: 100px;
+}
+
+.form_background {
+  position: absolute;
+  width: 1440px;
+  height: 750px;
+  left: 0px;
+  top: 100px;
+  border: 1px solid #000000;
+  box-sizing: border-box; 
+  background: url("https://s3-alpha-sig.figma.com/img/101e/5ab1/f24920a34abff94c5853975e8dc7a3ca?Expires=1643587200&Signature=bL6zvYyloo0FHxXw4S1fsLLqk~2IX~X9YxN2W~d-I2SBAz3MizU92QoH2ijwwUn4u2lO1VUBoQp9oYiiIOwhC3HaA2ypUwCiIyPPk5~I~bxjt0EEvaWp9XYaV-H5mM3GSBt3G0jDpCrsOiQw9oDs64o-3yT0UHqe0LFi3-kBEDhaWLS2pjIhDZoUh5KBuZu2XluyoscMejdsoCQHTaa8pxwYbnsxYDyL6vllLO6k3BF1QypY2l~mn6AoOJvKUqFVNAH5sqcOXUFEcCXb4z611NO41-gO9lJW7zNBiizglIgY9ZfoQv7yclB3Ba05oesyula4AXxF9llbWie1nZaOMA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")no-repeat center center fixed ;
+  background-size: 1500px;
+}
+
+.form_input_rectangle {
+  position: absolute;
+  width: 575px;
+  height: 261px;
+  left: 452px;
+  top: 175px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFF7E4;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
