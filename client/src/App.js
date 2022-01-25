@@ -21,6 +21,22 @@ function App() {
     setCards([...cards, newCard])
   }
 
+ function handleDeleteCard(id) {
+    const finalCards = cards.filter(card => card.id !== id)
+    setCards(finalCards)
+  }
+
+  function handleUpdateCard(updatedCardObj) {
+    const updatedCards = cards.map(card => {
+      if (card.id === updatedCardObj.id) {
+        return updatedCardObj;
+      } else {
+        return card;
+      }
+    });
+    setCards(updatedCards);
+  }
+
   // this is just for test
   useEffect(() => {
     fetch("http://localhost:3000/users/1")
@@ -44,7 +60,7 @@ function App() {
       <Nav user={user} onSetUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/my_cards" element={<UserCards cards={cards}/>} />
+        <Route path="/my_cards" element={<UserCards cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
         <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} />} />
       </Routes>
     </div>

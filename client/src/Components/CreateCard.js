@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// -the form will have a dropdown menu for the to choose the template, an input for the salutation, an input for the receiver, an input for the message, and input for the closing.  The signature will be auto populated based on the user
-// -we will fetch the template from the dropdown, this is how we will render the css, and this is how we will be able to render the finished card
 // -pop-up (maybe we can alert message thank you / your card have been created )
-// -will post to each table, this is how the cards will be created from the card component
 
 
 function CreateCard( {onAddCard}) {
@@ -92,8 +89,6 @@ function CreateCard( {onAddCard}) {
                     <option value="Best">Best</option>
                 </select>
                 <br></br>
-
-
                 <button type="submit">Add to Card</button>
             </form>
           </div>

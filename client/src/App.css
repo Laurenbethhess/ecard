@@ -1,11 +1,9 @@
 .happy_birthday {
   background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: 1500px;
+  background-size: 700px;
+  background-position-x: center;
   background-repeat: no-repeat;
-  width: 1440px;
-  height: 1000px;
-  left: 0px;
-  top: 0px;
+  height: 400px;
   color: white;
 }
 
@@ -22,12 +20,10 @@
 
 .congrats {
   background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: 1500px;
+  background-size: 500px;
+  background-position-x: center;
   background-repeat: no-repeat;
-  width: 1440px;
-  height: 1000px;
-  left: 0px;
-  top: 0px;
+  height: 300px;
   color: white;
 }
 
@@ -44,11 +40,11 @@
 
 .get_well {
   background-image: url("https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
-  background-size: 1500px;
+  background-size: 500px;
+  background-position-x: center;
   background-repeat: no-repeat;
-  width: 1440px;
-  height: 1000px;
-  left: 0px;
+  padding-bottom: 10px;
+  left: 3000px;
   top: 0px;
   color: white;
 }
@@ -66,11 +62,11 @@
 
 .love {
   background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
-  background-size: 1500px;
+  background-size: 500px;
+  background-position-x: center;
   background-repeat: no-repeat;
-  width: 1440px;
-  height: 1500px;
-  left: 0px;
+  padding-bottom: 150px;
+  left: 3000px;
   top: 0px;
   color: white;
 }
@@ -88,9 +84,10 @@
 
 .message_render {
   text-align: center;
-  font-size: 75px;
+  font-size: 50px;
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 100px;
+  padding-top: 20px;
+  /* padding-bottom: 100px; */
   font-family: cursive;
   font-weight: bold;
 }
@@ -230,9 +227,12 @@
   height: 261px;
   left: 452px;
   top: 175px;
-
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFF7E4;
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;
+}
+
+.form_edit_rectangle {
+  text-align: center;
 }

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-// -This will map over all the cards attributes and render them on the page 
+// need to add functionality so when you click on card it brings you to a page
+// that fetches and renders that specific card (:show)
+
 // -If it’s possible we should add download button for the card so users can send the card)
-// 	-updateCard button/deleteCard button
+// on that rendered page
 
 
-function UserCards( {cards}) {
 
-    const renderCards = cards.map(card => <Card card={card} key={card.id}/>)
-    console.log(renderCards)
 
+function UserCards( {cards, onCardDelete, onUpdateCard}) {
+
+    const renderCards = cards.map(card => <Card card={card} key={card.id} onCardDelete={onCardDelete} onUpdateCard={onUpdateCard} />)
 
     return (
         <div className="render_cards">
