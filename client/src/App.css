@@ -1,20 +1,247 @@
 .happy_birthday {
   background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: 1500px;
+  background-size: 700px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  color: white;
+}
+
+.happy_birthday_thumb {
+  background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
   width: 1440px;
   height: 750px;
-  left: 0px;
+  left: 100px;
+  top: 150px;
+  position: absolute;
+}
+
+.congrats {
+  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 500px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  color: white;
+}
+
+.congrats_thumb {
+  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 800px;
+  top: 150px;
+  position: absolute;
+}
+
+.get_well {
+  background-image: url("https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  background-size: 500px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  left: 3000px;
   top: 0px;
-  border: 1px solid #000000;
-  box-sizing: border-box; 
+  color: white;
+}
+
+.get_well_thumb {
+  background-image: url("https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 100px;
+  top: 525px;
+  position: absolute;
+}
+
+.love {
+  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  background-size: 500px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-bottom: 150px;
+  left: 3000px;
+  top: 0px;
+  color: white;
+}
+
+.love_thumb {
+  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 750px;
+  left: 800px;
+  top: 525px;
   position: absolute;
 }
 
 .message_render {
   text-align: center;
-  font-size: 75px;
+  font-size: 50px;
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 100px;
+  padding-top: 20px;
   font-family: cursive;
   font-weight: bold;
+}
+
+.nav_rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  opacity: 0.5;
+  background: #FAFCAF;
+}
+
+.e_card {
+  position: absolute;
+  width: 231px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  font-family: cursive;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.logout_button {
+  position: absolute;
+  width: 100px;
+  height: 75px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 69px;
+  text-align: center;
+  color: #000000;  
+  left: 1300px;
+  text-align: center;
+  color: #000000;
+  cursor:pointer;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 5pt;
+}
+
+.welcome {
+  position: absolute;
+  width: 231px;
+  height: 50px;
+  left: 1060px;
+  top: 0px;
+  font-family: cursive;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.form_link {
+  position: absolute;
+  left: 825px;
+  top: 0px;
+  font-family: courier;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.my_cards_link {
+  position: absolute;
+  left: 600px;
+  top: 0px;
+  font-family: courier;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;  
+}
+
+.home_link {
+  position: absolute;
+  left: 450px;
+  top: 0px;
+  font-family: courier;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 75px;
+  text-align: center;
+  color: #000000;
+}
+
+.form {
+  width: 1440px;
+  height: 750px;
+  left: 200px;
+  top: 25px;
+  position: absolute;
+}
+
+.message {
+  width: 200px;
+  height: 100px;
+}
+
+.render_cards {
+  padding-top: 100px;
+}
+
+.form_background {
+  position: absolute;
+  width: 1440px;
+  height: 750px;
+  left: 0px;
+  top: 100px;
+  border: 1px solid #000000;
+  box-sizing: border-box; 
+  background: url("https://s3-alpha-sig.figma.com/img/101e/5ab1/f24920a34abff94c5853975e8dc7a3ca?Expires=1643587200&Signature=bL6zvYyloo0FHxXw4S1fsLLqk~2IX~X9YxN2W~d-I2SBAz3MizU92QoH2ijwwUn4u2lO1VUBoQp9oYiiIOwhC3HaA2ypUwCiIyPPk5~I~bxjt0EEvaWp9XYaV-H5mM3GSBt3G0jDpCrsOiQw9oDs64o-3yT0UHqe0LFi3-kBEDhaWLS2pjIhDZoUh5KBuZu2XluyoscMejdsoCQHTaa8pxwYbnsxYDyL6vllLO6k3BF1QypY2l~mn6AoOJvKUqFVNAH5sqcOXUFEcCXb4z611NO41-gO9lJW7zNBiizglIgY9ZfoQv7yclB3Ba05oesyula4AXxF9llbWie1nZaOMA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")no-repeat center center fixed ;
+  background-size: 1500px;
+}
+
+.form_input_rectangle {
+  position: absolute;
+  width: 575px;
+  height: 261px;
+  left: 452px;
+  top: 175px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFF7E4;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.form_edit_rectangle {
+  text-align: center;
+}
+
+.home_user_cards_background {
+  background-color: #A9BA9D;
+}
+
+.home_background {
+  height: 1300px;
+  background-color: #A9BA9D;
+
 }
