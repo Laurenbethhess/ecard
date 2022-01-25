@@ -9,10 +9,11 @@ class CardsController < ApplicationController
     end
 
     def create
-        card = Card.create!(card_params)
+        card = @current_user.cards.create!(card_params)
         render json: card, status: :created
     end
 
+    # probably will need to fix this to apply to current user
     def update
         card = find_card
         card.update(update_params)

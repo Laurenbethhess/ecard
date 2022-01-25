@@ -8,14 +8,31 @@ import Login from "./Components/Login"
 import Nav from "./Components/Nav"
 
 function App() {
-  const [user, setUser] = useState("Lauren");
+  const [user, setUser] = useState(null);
   const [cards, setCards] = useState([]);
 
+
+
+  // useEffect(() => {
+  //   // actually want to fetch from user
+  //   fetch(`http://localhost:3000/users/1`)
+  //   // fetch('http://localhost:3000/cards')
+  //   .then(r => r.json())
+  //   // then want to return user.cards
+  //   .then(user => setCards(user.card))
+  //   // .then(cards => setCards(cards))
+  // }, [])
+
   useEffect(() => {
-    fetch('http://localhost:3000/cards')
-    .then(r => r.json())
-    .then(cards => setCards(cards))
-  }, [])
+    // auto-login
+    fetch("/me").then((resp) => {
+      if (resp.ok) {
+        resp.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user) return <Login onLogin={setUser} />;
 
   function handleAddCard(newCard) {
     setCards([...cards, newCard])
@@ -38,22 +55,13 @@ function App() {
   }
 
   // this is just for test
-  useEffect(() => {
-    fetch("http://localhost:3000/users/1")
-    .then(resp => resp.json())
-    .then(user => setUser(user))
-  }, [])
-
   // useEffect(() => {
-  //   // auto-login
-  //   fetch("/me").then((resp) => {
-  //     if (resp.ok) {
-  //       resp.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, []);
+  //   fetch("http://localhost:3000/users/1")
+  //   .then(resp => resp.json())
+  //   .then(user => setUser(user))
+  // }, [])
 
-  // if (!user) return <Login onLogin={setUser} />;
+
 
   return (
     <div>

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 // -pop-up (maybe we can alert message thank you / your card have been created )
-
+// -add template thumbails around the form
 
 function CreateCard( {onAddCard}) {
     const [receiver, setReceiver] = useState("")
     const [salutation, setSalutation] = useState("")
     const [message, setMessage] = useState("")
     const [closing, setClosing] = useState("")
-    const [user_id, setUserId] = useState(1)
+    const [user_id, setUserId] = useState(13)
     const [template_id, setTemplateId] = useState("")
 
 
@@ -69,8 +69,7 @@ function CreateCard( {onAddCard}) {
                     onChange={(e) => setReceiver(e.target.value)}
                 />
                 <br></br>
-                <textarea
-                    className="message"
+                <input
                     type="text"
                     name="message"
                     autoComplete="off"
@@ -89,7 +88,7 @@ function CreateCard( {onAddCard}) {
                     <option value="Best">Best</option>
                 </select>
                 <br></br>
-                <button type="submit">Add to Card</button>
+                <button type="submit">Create Card</button>
             </form>
           </div>
  
