@@ -87,7 +87,6 @@
   font-size: 50px;
   font-family: 'Courier New', Courier, monospace;
   padding-top: 20px;
-  /* padding-bottom: 100px; */
   font-family: cursive;
   font-weight: bold;
 }
@@ -235,4 +234,14 @@
 
 .form_edit_rectangle {
   text-align: center;
+}
+
+.home_user_cards_background {
+  background-color: #A9BA9D;
+}
+
+.home_background {
+  height: 1300px;
+  background-color: #A9BA9D;
+
 }

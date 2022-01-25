@@ -15,10 +15,13 @@ function UserCards( {cards, onCardDelete, onUpdateCard}) {
     const renderCards = cards.map(card => <Card card={card} key={card.id} onCardDelete={onCardDelete} onUpdateCard={onUpdateCard} />)
 
     return (
-        <div className="render_cards">
-            {renderCards}
-
+        <div className="home_user_cards_background">
+            <br/>
+            <div className="render_cards">
+                {renderCards}
+            </div>
         </div>
+
 
     )
 
