@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function EditCard( {onUpdateCard, card}) {
     const [receiver, setReceiver] = useState(card.receiver)
@@ -11,7 +11,7 @@ function EditCard( {onUpdateCard, card}) {
       }
 
     function handleFormSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
 
     fetch(`http://localhost:3000/cards/${card.id}`, {
         method: "PATCH",
@@ -50,7 +50,7 @@ function EditCard( {onUpdateCard, card}) {
                     onChange={(e) => setReceiver(e.target.value)}
                 />
                 <br></br>
-                <textarea
+                <input
                     className="message"
                     type="text"
                     name="message"

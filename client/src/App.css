@@ -43,9 +43,7 @@
   background-size: 500px;
   background-position-x: center;
   background-repeat: no-repeat;
-  padding-bottom: 10px;
-  left: 3000px;
-  top: 0px;
+  height: 300px;
   color: white;
 }
 
@@ -62,12 +60,10 @@
 
 .love {
   background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
-  background-size: 500px;
+  background-size: 550px;
   background-position-x: center;
   background-repeat: no-repeat;
-  padding-bottom: 150px;
-  left: 3000px;
-  top: 0px;
+  height: 500px;
   color: white;
 }
 
@@ -84,9 +80,9 @@
 
 .message_render {
   text-align: center;
-  font-size: 50px;
+  font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 20px;
+  padding-top: 60px;
   font-family: cursive;
   font-weight: bold;
 }
@@ -200,8 +196,8 @@
 }
 
 .message {
-  width: 200px;
-  height: 100px;
+  width: 375px;
+  height: 20px;
 }
 
 .render_cards {
@@ -243,5 +239,8 @@
 .home_background {
   height: 1300px;
   background-color: #A9BA9D;
+}
 
+.text_area {
+  width: 100px;
 }

@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 import EditCard from "./EditCard";
 
-// need to add edit button/deleteCard button
+    //if card.user.id === user_id, render card
+    //same logic for update and delete
 
 function Card( {card, onUpdateCard, onCardDelete}) {
+
+
 
     function handleDeleteClick() {
         fetch(`http://localhost:3000/cards/${card.id}`, {
@@ -17,7 +20,9 @@ function Card( {card, onUpdateCard, onCardDelete}) {
         <div className={card.template.classname}>
             <div className="message_render">
                 <div>{card.salutation} {card.receiver},</div>
+                <br/>
                 <div>{card.message}</div>
+                <br/>
                 <div>{card.closing}, {card.user.first_name}</div>
             </div>
         </div>
