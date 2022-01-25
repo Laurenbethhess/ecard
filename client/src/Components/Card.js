@@ -1,9 +1,12 @@
 import React, {  } from "react";
 import EditCard from "./EditCard";
 
-// need to add edit button/deleteCard button
+    //if card.user.id === user_id, render card
+    //same logic for update and delete
 
 function Card( {card, onUpdateCard, onCardDelete}) {
+
+
 
     function handleDeleteClick() {
         fetch(`http://localhost:3000/cards/${card.id}`, {

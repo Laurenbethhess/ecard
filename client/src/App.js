@@ -65,7 +65,7 @@ function App() {
       <Nav user={user} onSetUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/my_cards" element={<UserCards cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
+        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
         <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} user_id={user_id} />} />
       </Routes>
     </div>
