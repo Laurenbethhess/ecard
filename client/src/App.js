@@ -11,17 +11,11 @@ function App() {
   const [user, setUser] = useState(null);
   const [cards, setCards] = useState([]);
 
-
-
-  // useEffect(() => {
-  //   // actually want to fetch from user
-  //   fetch(`http://localhost:3000/users/1`)
-  //   // fetch('http://localhost:3000/cards')
-  //   .then(r => r.json())
-  //   // then want to return user.cards
-  //   .then(user => setCards(user.card))
-  //   // .then(cards => setCards(cards))
-  // }, [])
+  useEffect(() => {
+    fetch('http://localhost:3000/cards')
+    .then(r => r.json())
+    .then(cards => setCards(cards))
+  }, [])
 
   useEffect(() => {
     // auto-login
@@ -33,6 +27,9 @@ function App() {
   }, []);
 
   if (!user) return <Login onLogin={setUser} />;
+
+  const user_id = user.id
+
 
   function handleAddCard(newCard) {
     setCards([...cards, newCard])
@@ -56,7 +53,7 @@ function App() {
 
   // this is just for test
   // useEffect(() => {
-  //   fetch("http://localhost:3000/users/1")
+  //   fetch("http://localhost:3000/users/13")
   //   .then(resp => resp.json())
   //   .then(user => setUser(user))
   // }, [])
@@ -69,7 +66,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/my_cards" element={<UserCards cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
-        <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} />} />
+        <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} user_id={user_id} />} />
       </Routes>
     </div>
   );

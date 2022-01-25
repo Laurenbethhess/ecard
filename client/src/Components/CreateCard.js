@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // -pop-up (maybe we can alert message thank you / your card have been created )
 // -add template thumbails around the form
 
-function CreateCard( {onAddCard}) {
+function CreateCard( {onAddCard, user_id}) {
     const [receiver, setReceiver] = useState("")
     const [salutation, setSalutation] = useState("")
     const [message, setMessage] = useState("")
     const [closing, setClosing] = useState("")
-    const [user_id, setUserId] = useState(13)
+    const [user, setUserId] = useState(user_id)
     const [template_id, setTemplateId] = useState("")
 
-
     function handleSubmit(e) {
-    //   e.preventDefault()
+      e.preventDefault()
   
       fetch("http://localhost:3000/cards", {
         method: "POST",
@@ -25,7 +24,7 @@ function CreateCard( {onAddCard}) {
           salutation: salutation,
           message: message,
           closing: closing,
-          user_id: user_id,
+          user_id: user,
           template_id: template_id
         }),
       })
@@ -37,6 +36,7 @@ function CreateCard( {onAddCard}) {
         setMessage("")
         setClosing("")
         setTemplateId("")
+        setUserId(user_id)
       })
     }
   
@@ -88,6 +88,13 @@ function CreateCard( {onAddCard}) {
                     <option value="Best">Best</option>
                 </select>
                 <br></br>
+                {/* <input
+                    type="text"
+                    name="user_id"
+                    value={user_id}
+                    placeholder="User_ID"
+                    onChange={(e) => setUserId(e.target.value)}
+                /> */}
                 <button type="submit">Create Card</button>
             </form>
           </div>
@@ -95,13 +102,6 @@ function CreateCard( {onAddCard}) {
         <br/>
       </div>
       
-    )
-
-    return (
-        <div>
-
-        </div>
-
     )
 
 }

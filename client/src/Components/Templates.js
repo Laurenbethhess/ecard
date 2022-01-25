@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 
 // -map over each of the templates to create thumbnails of each template at top
 

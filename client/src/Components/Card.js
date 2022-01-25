@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 import EditCard from "./EditCard";
 
 // need to add edit button/deleteCard button
