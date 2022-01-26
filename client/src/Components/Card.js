@@ -9,7 +9,7 @@ function Card( {card, onUpdateCard, onCardDelete}) {
 
 
     function handleDeleteClick() {
-        fetch(`http://localhost:3000/cards/${card.id}`, {
+        fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`, {
           method: "DELETE",
         })
         onCardDelete(card.id)
