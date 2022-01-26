@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
-// -pop-up (maybe we can alert message thank you / your card have been created )
 // -add template thumbails around the form
 
 function CreateCard( {onAddCard, user_id}) {
@@ -10,6 +10,8 @@ function CreateCard( {onAddCard, user_id}) {
     const [closing, setClosing] = useState("")
     const [user, setUserId] = useState(user_id)
     const [template_id, setTemplateId] = useState("")
+    const [errors, setErrors] = useState([]);
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
       e.preventDefault()
@@ -27,30 +29,34 @@ function CreateCard( {onAddCard, user_id}) {
           user_id: user,
           template_id: template_id
         }),
-      })
-      .then((r) => r.json())
-      .then(newCard => {
-        onAddCard(newCard)
-        setReceiver("")
-        setSalutation("")
-        setMessage("")
-        setClosing("")
-        setTemplateId("")
-        setUserId(user_id)
-      })
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then(newCard => {
+              onAddCard(newCard)
+              setReceiver("")
+              setSalutation("")
+              setMessage("")
+              setClosing("")
+              setTemplateId("")
+              setUserId(user_id)
+              navigate('/my_cards');
+            })
+        } else {
+          r.json().then((err) => setErrors(err.errors));  
+        }
+      });
     }
   
     return (
       <div className="form_background">
           <div className="form_input_rectangle">
             <form className="form" onSubmit={handleSubmit}>
-            {/* ***need to set error since this is required***  */}
                 <select onChange={(e) => setTemplateId(e.target.value)}>
                     <option>Choose template (required)</option>
                     <option value="1">Happy Birthday</option>
-                    <option value="4">Congrats</option>
-                    <option value="5">Get Well</option>
-                    <option value="6">Love</option>
+                    <option value="2">Congrats</option>
+                    <option value="3">Get Well</option>
+                    <option value="4">Love</option>
                 </select>
                 <br></br>
                 <select onChange={(e) => setSalutation(e.target.value)}>
@@ -88,14 +94,10 @@ function CreateCard( {onAddCard, user_id}) {
                     <option value="Best">Best</option>
                 </select>
                 <br></br>
-                {/* <input
-                    type="text"
-                    name="user_id"
-                    value={user_id}
-                    placeholder="User_ID"
-                    onChange={(e) => setUserId(e.target.value)}
-                /> */}
                 <button type="submit">Create Card</button>
+                {errors.map((err) => (
+                  <p key={err}>{err}</p>
+                ))}
             </form>
           </div>
  

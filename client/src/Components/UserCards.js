@@ -9,7 +9,7 @@ import Card from "./Card";
 
 function UserCards( { cards, onCardDelete, onUpdateCard, user_id }) {
 
-
+    
     const userCards = cards.filter(card => card.user.id === user_id)
 
     const userRenderedCards = userCards.map(card => <Card card={card} key={card.id} onCardDelete={onCardDelete} onUpdateCard={onUpdateCard} user_id={user_id} />)
@@ -18,7 +18,6 @@ function UserCards( { cards, onCardDelete, onUpdateCard, user_id }) {
         <div className="home_user_cards_background">
             <br/>
             <div className="render_cards">
-                {/* {renderCards} */}
                 {userRenderedCards}
             </div>
         </div>
