@@ -16,7 +16,7 @@ function CreateCard( {onAddCard, user_id}) {
     function handleSubmit(e) {
       e.preventDefault()
   
-      fetch("http://localhost:3000/cards", {
+      fetch("https://my-ecards.herokuapp.com/cards", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

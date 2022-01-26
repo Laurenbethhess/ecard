@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :cards
+    has_many :cards, dependent: :destroy
     has_many :templates, through: :cards
 
     has_secure_password

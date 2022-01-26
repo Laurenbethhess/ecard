@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav( {user, onSetUser}) {
 
     function handleLogoutClick() {
-        fetch("/logout", { method: "DELETE" }).then((r) => {
+        fetch("https://my-ecards.herokuapp.com/logout", { method: "DELETE" }).then((r) => {
             if (r.ok) {
                 onSetUser(null);
             }
