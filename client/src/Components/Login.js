@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Signup from "./Signup"
+import { useNavigate } from 'react-router-dom';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -8,7 +8,7 @@ function Login({ onLogin }) {
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showLogin, setShowLogin] = useState(true);
-
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -22,7 +22,10 @@ function Login({ onLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user)
+          navigate('/')
+        })
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -31,7 +34,6 @@ function Login({ onLogin }) {
 
   return (
     <div className="card">
-    <Link className="all_link" to="/">Home</Link>
     <div className="rectangle_login"></div>
     <h2 className="please_login">Please Login</h2>
     <>
@@ -55,6 +57,7 @@ function Login({ onLogin }) {
             <button variant="fill" color="primary" type="submit">
                 {isLoading ? "Loading..." : "Login"}
             </button>
+            {errors.map((err) => (<p key={err}>{err}</p>))}
           </form>
           <br />
           <p className="login_box">
@@ -77,7 +80,6 @@ function Login({ onLogin }) {
         </>
       )}
     </>
-    
     </div>
   );
 }

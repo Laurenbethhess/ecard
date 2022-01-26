@@ -26,10 +26,9 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
-
+  if (!user) return <Login onLogin={setUser} />
+  
   const user_id = user.id
-
 
   function handleAddCard(newCard) {
     setCards([...cards, newCard])
@@ -50,15 +49,6 @@ function App() {
     });
     setCards(updatedCards);
   }
-
-  // this is just for test
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/users/13")
-  //   .then(resp => resp.json())
-  //   .then(user => setUser(user))
-  // }, [])
-
-
 
   return (
     <div>
