@@ -6,8 +6,7 @@ function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard})
     const navigate = useNavigate();
 
     function handleclick() {
-        fetch(`http://localhost:3000/cards/${card.id}`)
-        // fetch(`https://my-ecards.herokuapp.com/cards/80`)
+        fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`)
         .then(r => r.json())
         .then(singleCard => handleSingleCard(singleCard))
         navigate('/single_card')
