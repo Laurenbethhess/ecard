@@ -1,7 +1,6 @@
 import React, {  } from "react";
 import Card from "./Card";
 
-
 // -If it’s possible we should add download button for the card so users can send the card)
 // on that rendered page
 

@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard}) {
     const navigate = useNavigate();
 
-
     function handleclick() {
         fetch(`http://localhost:3000/cards/${card.id}`)
         // fetch(`https://my-ecards.herokuapp.com/cards/80`)
@@ -40,8 +39,6 @@ function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard})
             <>__________________________________________________</>
             <br/><br/>
         </div>
-
-
         </div>
 
         
