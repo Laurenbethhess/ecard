@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import EditCard from "./EditCard";
 import { useNavigate } from 'react-router-dom';
-import SingleCard from "./SingleCard";
-import { Link } from "react-router-dom";
-
-
-
-    //if card.user.id === user_id, render card
-    //same logic for update and delete
 
 function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard}) {
-    // const [singleCard, setSingleCard] = useState('');
     const navigate = useNavigate();
 
 
