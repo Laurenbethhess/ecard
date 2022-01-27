@@ -33,53 +33,56 @@ function Login({ onLogin }) {
   }
 
   return (
-    <div className="card">
-    <div className="rectangle_login"></div>
-    <h2 className="please_login">Please Login</h2>
-    <>
+    <div  className="min-h-screen bg-red-200 font-mono text-center mt-20">
       {showLogin ? (
-        <>
-          <form className="login_box" onSubmit={handleSubmit}>
+        <div>
+          <h2 className="text-bold mt-4 mb-4">Please Login</h2>
+          <form  className="mt-4" onSubmit={handleSubmit}>
             <input
+                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                 type="text"
                 id="username"
                 autoComplete="off"
+                placeholder="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
             />
+            <br/>
             <input
+                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                placeholder="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button variant="fill" color="primary" type="submit">
+            <br/>
+            <button className="bg-yellow-100 rounded-sm p-1 font-semibold" type="submit">
                 {isLoading ? "Loading..." : "Login"}
             </button>
             {errors.map((err) => (<p key={err}>{err}</p>))}
           </form>
           <br />
-          <p className="login_box">
+          <p>
             Don't have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(false)}>
+            <button className="italic underline" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
-        </>
+        </div>
       ) : (
-        <>
+        <div>
           <Signup onLogin={onLogin} />
           <br />
-          <p className="login_box">
+          <p>
             Already have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(true)}>
+            <button className="italic underline" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>
-        </>
+        </div>
       )}
-    </>
     </div>
   );
 }
