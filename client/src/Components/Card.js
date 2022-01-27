@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
     //if card.user.id === user_id, render card
     //same logic for update and delete
 
-function Card( {card, onUpdateCard, onCardDelete}) {
-    const [singleCard, setSingleCard] = useState('');
+function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard}) {
+    // const [singleCard, setSingleCard] = useState('');
     const navigate = useNavigate();
 
 
@@ -18,8 +18,8 @@ function Card( {card, onUpdateCard, onCardDelete}) {
         fetch(`http://localhost:3000/cards/${card.id}`)
         // fetch(`https://my-ecards.herokuapp.com/cards/80`)
         .then(r => r.json())
-        .then(singleCard => setSingleCard(singleCard))
-        // navigate('/single_card')
+        .then(singleCard => handleSingleCard(singleCard))
+        navigate('/single_card')
       }
 
     function handleDeleteClick() {
@@ -29,8 +29,6 @@ function Card( {card, onUpdateCard, onCardDelete}) {
         })
         onCardDelete(card.id)
     }
-
-    console.log(singleCard)
 
     return (
         <div onClick={handleclick}>

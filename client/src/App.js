@@ -7,15 +7,11 @@ import CreateCard from "./Components/CreateCard"
 import Login from "./Components/Login"
 import Nav from "./Components/Nav"
 import SingleCard from './Components/SingleCard';
-// import { useNavigate } from 'react-router-dom';
-
 
 function App() {
   const [user, setUser] = useState(null);
   const [cards, setCards] = useState([]);
-  // const [card, setCard] = useState('');
-  // const navigate = useNavigate();
-
+  const [singleCard, setSingleCard] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:3000/cards')
@@ -23,13 +19,6 @@ function App() {
     .then(r => r.json())
     .then(cards => setCards(cards))
   }, [])
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:3000/cards/${card.id}`)
-  //   // fetch(`https://my-ecards.herokuapp.com/cards/80`)
-  //   .then(r => r.json())
-  //   .then(card => setCard(card))
-  // }, [])
 
   useEffect(() => {
     // auto-login
@@ -53,11 +42,6 @@ function App() {
     setCards(finalCards)
   }
 
-  // function handleclick() {
-  //   setCard(card)
-  //   navigate('/single_card');
-  // }
-
   function handleUpdateCard(updatedCardObj) {
     const updatedCards = cards.map(card => {
       if (card.id === updatedCardObj.id) {
@@ -74,11 +58,9 @@ function App() {
       <Nav user={user} onSetUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard} onClick={handleclick}/>} /> */}
-        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard} />} />
+        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard} singleCard={singleCard} handleSingleCard={setSingleCard} />} />
         <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} user_id={user_id} />} />
-        <Route path="/single_card" element={<SingleCard />} />
-        {/* <Route path="/single_card" element={<SingleCard card={card} />} /> */}
+        <Route path="/single_card" element={<SingleCard singleCard={singleCard} />} />
       </Routes>
     </div>
   );
