@@ -7,10 +7,12 @@ import UserCards from "./Components/UserCards"
 import CreateCard from "./Components/CreateCard"
 import Login from "./Components/Login"
 import Nav from "./Components/Nav"
+import SingleCard from './Components/SingleCard';
 
 function App() {
   const [user, setUser] = useState(null);
   const [cards, setCards] = useState([]);
+  const [singleCard, setSingleCard] = useState('');
 
   useEffect(() => {
     fetch('https://my-ecards.herokuapp.com/cards')
@@ -56,8 +58,9 @@ function App() {
       <Nav user={user} onSetUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
+        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard} singleCard={singleCard} handleSingleCard={setSingleCard} />} />
         <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} user_id={user_id} />} />
+        <Route path="/single_card" element={<SingleCard singleCard={singleCard} />} />
       </Routes>
     </div>
   );

@@ -13,6 +13,7 @@ function Signup({ onLogin }) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
+
     fetch("https://my-ecards.herokuapp.com/users", {
       method: "POST",
       headers: {
