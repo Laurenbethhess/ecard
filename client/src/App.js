@@ -13,7 +13,7 @@ function App() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/cards')
+    fetch('https://my-ecards.herokuapp.com/cards')
     .then(r => r.json())
     .then(cards => setCards(cards))
   }, [])
