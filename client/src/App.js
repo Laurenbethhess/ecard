@@ -6,15 +6,27 @@ import UserCards from "./Components/UserCards"
 import CreateCard from "./Components/CreateCard"
 import Login from "./Components/Login"
 import Nav from "./Components/Nav"
+import SingleCard from './Components/SingleCard';
+import { useNavigate } from 'react-router-dom';
+
 
 function App() {
   const [user, setUser] = useState(null);
   const [cards, setCards] = useState([]);
+  const [card, setCard] = useState('');
+  const navigate = useNavigate();
+
 
   useEffect(() => {
-    fetch('http://localhost:3000/cards')
+    fetch('https://my-ecards.herokuapp.com/cards')
     .then(r => r.json())
     .then(cards => setCards(cards))
+  }, [])
+
+  useEffect(() => {
+    fetch(`https://my-ecards.herokuapp.com/cards/7`)
+    .then(r => r.json())
+    .then(card => setCard(card))
   }, [])
 
   useEffect(() => {
@@ -39,6 +51,11 @@ function App() {
     setCards(finalCards)
   }
 
+  function handleclick() {
+    setCard(card)
+    navigate('/single_card');
+  }
+
   function handleUpdateCard(updatedCardObj) {
     const updatedCards = cards.map(card => {
       if (card.id === updatedCardObj.id) {
@@ -55,8 +72,9 @@ function App() {
       <Nav user={user} onSetUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard}/>} />
+        <Route path="/my_cards" element={<UserCards user_id={user_id} cards={cards} onCardDelete={handleDeleteCard} onUpdateCard={handleUpdateCard} onClick={handleclick}/>} />
         <Route path="/new_card" element={<CreateCard onAddCard={handleAddCard} user_id={user_id} />} />
+        <Route path="/single_card" element={<SingleCard card={card} />} />
       </Routes>
     </div>
   );

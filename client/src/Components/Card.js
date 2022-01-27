@@ -4,7 +4,7 @@ import EditCard from "./EditCard";
     //if card.user.id === user_id, render card
     //same logic for update and delete
 
-function Card( {card, onUpdateCard, onCardDelete}) {
+function Card( {card, onUpdateCard, onCardDelete, onClick}) {
 
 
 
@@ -16,7 +16,7 @@ function Card( {card, onUpdateCard, onCardDelete}) {
     }
 
     return (
-        <div>
+        <div onClick={onClick}>
         <div className={card.template.classname}>
             <div className="message_render">
                 <div>{card.salutation} {card.receiver},</div>

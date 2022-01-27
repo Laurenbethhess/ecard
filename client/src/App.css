@@ -23,8 +23,9 @@
   background-size: 500px;
   background-position-x: center;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 500px;
   color: white;
+  top: 1000px;
 }
 
 .congrats_thumb {
@@ -243,4 +244,8 @@
 
 .text_area {
   width: 100px;
+}
+
+.top {
+  padding-top: 150px;
 }
