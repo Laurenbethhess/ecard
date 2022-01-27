@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import EditCard from "./EditCard";
 import { useNavigate } from 'react-router-dom';
 
-function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard}) {
+function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard}) {
     const navigate = useNavigate();
 
     function handleclick() {

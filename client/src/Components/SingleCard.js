@@ -1,6 +1,7 @@
 import React, {  } from "react";
 
 function SingleCard( {singleCard}) {
+    {console.log(singleCard)}
 
     return (
         <div className="top">
