@@ -4,8 +4,7 @@ function SingleCard( {singleCard}) {
 
     return (
         <div className="top">
-            <div>
-            {/* <div className={singleCard.template.classname}> */}
+            <div className={singleCard.template.classname}>
                 <div className="message_render">
                     <div>{singleCard.salutation} {singleCard.receiver},</div>
                     <br/>

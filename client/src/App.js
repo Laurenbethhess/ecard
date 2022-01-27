@@ -53,6 +53,8 @@ function App() {
     setCards(updatedCards);
   }
 
+  console.log(singleCard)
+
   return (
     <div>
       <Nav user={user} onSetUser={setUser} />
