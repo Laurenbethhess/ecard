@@ -14,8 +14,7 @@ function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard})
       }
 
     function handleDeleteClick() {
-        fetch(`http://localhost:3000/cards/${card.id}`, {
-        // fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`, {
+        fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`, {
           method: "DELETE",
         })
         onCardDelete(card.id)
@@ -34,7 +33,7 @@ function Card( {card, onUpdateCard, onCardDelete, singleCard, handleSingleCard})
         </div>
         <div className="form_edit_rectangle">
             <EditCard onUpdateCard={onUpdateCard} card={card}/>
-            <button onClick={handleDeleteClick}>Delete Card</button>
+            <button className="bg-red-600 mt-4 p-1 font-semibold rounded-sm text-sm" onClick={handleDeleteClick}>Delete Card</button>
             <br/>
             <>__________________________________________________</>
             <br/><br/>

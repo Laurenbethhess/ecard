@@ -1,14 +1,15 @@
 .happy_birthday {
-  background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: url("https://www.gigglesnhugs.com/wp-content/uploads/2015/11/Best-Kids-Party-Places-in-Los-Angeles.jpg");
   background-size: 700px;
   background-position-x: center;
   background-repeat: no-repeat;
+  width: 500;
   height: 400px;
   color: white;
 }
 
 .happy_birthday_thumb {
-  background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: url("https://www.gigglesnhugs.com/wp-content/uploads/2015/11/Best-Kids-Party-Places-in-Los-Angeles.jpg");
   background-size: 500px;
   background-repeat: no-repeat;
   width: 1440px;
@@ -16,20 +17,23 @@
   left: 100px;
   top: 150px;
   position: absolute;
+  border-style: solid;
+  border-radius: 25px;
 }
 
 .congrats {
-  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: url("https://t3.ftcdn.net/jpg/01/32/28/12/360_F_132281285_PKHS9XwTDE2Cem6HugW1ts6BlQTneHft.jpg");
   background-size: 500px;
   background-position-x: center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 300px;
+  width: 500;
   color: white;
   top: 1000px;
 }
 
 .congrats_thumb {
-  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: url("https://t3.ftcdn.net/jpg/01/32/28/12/360_F_132281285_PKHS9XwTDE2Cem6HugW1ts6BlQTneHft.jpg");
   background-size: 500px;
   background-repeat: no-repeat;
   width: 1440px;
@@ -37,6 +41,7 @@
   left: 800px;
   top: 150px;
   position: absolute;
+  border-radius: 25px;
 }
 
 .get_well {
@@ -44,8 +49,10 @@
   background-size: 500px;
   background-position-x: center;
   background-repeat: no-repeat;
+  width: 500;
   height: 300px;
   color: white;
+  
 }
 
 .get_well_thumb {
@@ -57,19 +64,22 @@
   left: 100px;
   top: 525px;
   position: absolute;
+  border-radius: 25px;
 }
 
 .love {
-  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"); */
+  background-image: url("https://images.unsplash.com/photo-1581022788601-1062157ba042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBpbmslMjBoZWFydHxlbnwwfHwwfHw%3D&w=1000&q=80");
   background-size: 550px;
   background-position-x: center;
   background-repeat: no-repeat;
-  height: 500px;
+  width: 500;
+  height: 380px;
   color: white;
 }
 
 .love_thumb {
-  background-image: url("https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
+  background-image: url("https://images.unsplash.com/photo-1581022788601-1062157ba042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBpbmslMjBoZWFydHxlbnwwfHwwfHw%3D&w=1000&q=80");
   background-size: 500px;
   background-repeat: no-repeat;
   width: 1440px;
@@ -77,6 +87,7 @@
   left: 800px;
   top: 525px;
   position: absolute;
+  border-radius: 25px;
 }
 
 .message_render {
@@ -189,11 +200,13 @@
 }
 
 .form {
-  width: 1440px;
+  text-align: center;
+  padding-top: 30px;
+  /* width: 1440px;
   height: 750px;
   left: 200px;
-  top: 25px;
-  position: absolute;
+  top: 25px; */
+  /* position: absolute; */
 }
 
 .message {
@@ -210,7 +223,7 @@
   width: 1440px;
   height: 750px;
   left: 0px;
-  top: 100px;
+  top: 75px;
   border: 1px solid #000000;
   box-sizing: border-box; 
   background: url("https://s3-alpha-sig.figma.com/img/101e/5ab1/f24920a34abff94c5853975e8dc7a3ca?Expires=1643587200&Signature=bL6zvYyloo0FHxXw4S1fsLLqk~2IX~X9YxN2W~d-I2SBAz3MizU92QoH2ijwwUn4u2lO1VUBoQp9oYiiIOwhC3HaA2ypUwCiIyPPk5~I~bxjt0EEvaWp9XYaV-H5mM3GSBt3G0jDpCrsOiQw9oDs64o-3yT0UHqe0LFi3-kBEDhaWLS2pjIhDZoUh5KBuZu2XluyoscMejdsoCQHTaa8pxwYbnsxYDyL6vllLO6k3BF1QypY2l~mn6AoOJvKUqFVNAH5sqcOXUFEcCXb4z611NO41-gO9lJW7zNBiizglIgY9ZfoQv7yclB3Ba05oesyula4AXxF9llbWie1nZaOMA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")no-repeat center center fixed ;
@@ -231,15 +244,16 @@
 
 .form_edit_rectangle {
   text-align: center;
+  /* background-color:rgb(215, 152, 218) */
 }
 
 .home_user_cards_background {
-  background-color: #A9BA9D;
+  background-color: #f5e9a4;
 }
 
 .home_background {
   height: 1300px;
-  background-color: #A9BA9D;
+  background-color: #f5e9a4;
 }
 
 .text_area {

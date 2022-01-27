@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css'
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
@@ -14,8 +15,7 @@ function App() {
   const [singleCard, setSingleCard] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/cards')
-    // fetch('https://my-ecards.herokuapp.com/cards')
+    fetch('https://my-ecards.herokuapp.com/cards')
     .then(r => r.json())
     .then(cards => setCards(cards))
   }, [])
@@ -67,4 +67,6 @@ function App() {
 }
 
 export default App;
+
+
 
