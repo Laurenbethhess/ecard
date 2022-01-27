@@ -14,20 +14,12 @@ function App() {
   const [cards, setCards] = useState([]);
   const [singleCard, setSingleCard] = useState(
     {
-      id: 88,
-      receiver: "",
-      message: "",
-      salutation: "",
-      closing: "",
       template: {
-        id: 1,
-        classname: "happy_birthday"
+        id: 5,
+        classname: "blank"
       },
       user: {
-        id: 13,
-        username: "Caris",
-        first_name: "Caris",
-        last_name: "Hess-Boyle"
+        id: 1
       }
     }
   )
