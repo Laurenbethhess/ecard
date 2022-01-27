@@ -48,10 +48,13 @@ function CreateCard( {onAddCard, user_id}) {
     }
   
     return (
+      
       <div className="form_background">
           <div className="form_input_rectangle">
             <form className="form" onSubmit={handleSubmit}>
-                <select onChange={(e) => setTemplateId(e.target.value)}>
+                <select 
+                    className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
+                    onChange={(e) => setTemplateId(e.target.value)}>
                     <option>Choose template (required)</option>
                     <option value="1">Happy Birthday</option>
                     <option value="2">Congrats</option>
@@ -59,7 +62,9 @@ function CreateCard( {onAddCard, user_id}) {
                     <option value="4">Love</option>
                 </select>
                 <br></br>
-                <select onChange={(e) => setSalutation(e.target.value)}>
+                <select 
+                    className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
+                    onChange={(e) => setSalutation(e.target.value)}>
                     <option >Choose Greeting</option>
                     <option value="Greetings">Greetings</option>
                     <option value="Hello">Hello</option>
@@ -67,6 +72,7 @@ function CreateCard( {onAddCard, user_id}) {
                 </select>
                 <br></br>
                 <input
+                    className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
                     type="text"
                     name="receiver"
                     autoComplete="off"
@@ -76,6 +82,7 @@ function CreateCard( {onAddCard, user_id}) {
                 />
                 <br></br>
                 <input
+                    className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
                     type="text"
                     name="message"
                     autoComplete="off"
@@ -84,7 +91,9 @@ function CreateCard( {onAddCard, user_id}) {
                     onChange={(e) => setMessage(e.target.value)}
                 />
                 <br></br>
-                <select onChange={(e) => setClosing(e.target.value)}>
+                <select 
+                    className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
+                    onChange={(e) => setClosing(e.target.value)}>
                     <option>Choose Signature</option>
                     <option value="Love">Love</option>
                     <option value="Yours Truly">Yours Truly</option>
@@ -94,7 +103,7 @@ function CreateCard( {onAddCard, user_id}) {
                     <option value="Best">Best</option>
                 </select>
                 <br></br>
-                <button type="submit">Create Card</button>
+                <button className="bg-green-200 mt-4 rounded-sm p-1 font-semibold" type="submit">Create Card</button>
                 {errors.map((err) => (
                   <p key={err}>{err}</p>
                 ))}

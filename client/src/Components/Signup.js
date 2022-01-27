@@ -37,8 +37,10 @@ function Signup({ onLogin }) {
 
     return (
         <div className="login_box">
+          <h2 className="text-bold mt-4 mb-4">Please Sign In</h2>
             <form onSubmit={handleSubmit}>
                 <input
+                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                 type="text"
                 placeholder="username"
                 id="username"
@@ -46,7 +48,9 @@ function Signup({ onLogin }) {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 />
+                <br/>
                 <input
+                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                 type="password"
                 placeholder="password"
                 id="password"
@@ -54,14 +58,18 @@ function Signup({ onLogin }) {
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="current-password"
                 />
+                <br/>
                 <input
+                    className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                     type="text"
                     placeholder="first name"
                     id="first_name"
                     value={firstname}
                     onChange={(e) => setFirstName(e.target.value)}
                 />
+                <br/>
                 <input
+                    className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
                     type="text"
                     placeholder="last name"
                     id="last_name"
@@ -69,7 +77,8 @@ function Signup({ onLogin }) {
                     onChange={(e) => setLastName(e.target.value)}
                     autoComplete="current-password"
                 />
-                <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+                <br/>
+                <button className="bg-yellow-100 rounded-sm p-1 font-semibold" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
                 {errors.map((err) => (<p key={err}>{err}</p>))}
             </form>
         </div>
