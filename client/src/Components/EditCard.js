@@ -14,6 +14,7 @@ function EditCard( {onUpdateCard, card}) {
     e.preventDefault();
 
     fetch(`http://localhost:3000/cards/${card.id}`, {
+    // fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`, {
         method: "PATCH",
         headers: {
         "Content-Type": "application/json",

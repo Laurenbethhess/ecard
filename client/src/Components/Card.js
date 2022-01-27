@@ -1,22 +1,39 @@
-import React, {  } from "react";
+import React, { useState, useEffect } from "react";
 import EditCard from "./EditCard";
+import { useNavigate } from 'react-router-dom';
+import SingleCard from "./SingleCard";
+import { Link } from "react-router-dom";
+
+
 
     //if card.user.id === user_id, render card
     //same logic for update and delete
 
-function Card( {card, onUpdateCard, onCardDelete, onClick}) {
+function Card( {card, onUpdateCard, onCardDelete}) {
+    const [singleCard, setSingleCard] = useState('');
+    const navigate = useNavigate();
 
 
+    function handleclick() {
+        fetch(`http://localhost:3000/cards/${card.id}`)
+        // fetch(`https://my-ecards.herokuapp.com/cards/80`)
+        .then(r => r.json())
+        .then(singleCard => setSingleCard(singleCard))
+        // navigate('/single_card')
+      }
 
     function handleDeleteClick() {
         fetch(`http://localhost:3000/cards/${card.id}`, {
+        // fetch(`https://my-ecards.herokuapp.com/cards/${card.id}`, {
           method: "DELETE",
         })
         onCardDelete(card.id)
     }
 
+    console.log(singleCard)
+
     return (
-        <div onClick={onClick}>
+        <div onClick={handleclick}>
         <div className={card.template.classname}>
             <div className="message_render">
                 <div>{card.salutation} {card.receiver},</div>

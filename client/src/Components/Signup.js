@@ -14,6 +14,7 @@ function Signup({ onLogin }) {
     setErrors([]);
     setIsLoading(true);
     fetch("http://localhost:3000/users", {
+    // fetch("https://my-ecards.herokuapp.com//users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
