@@ -17,6 +17,7 @@
   left: 100px;
   top: 150px;
   position: absolute;
+  border-style: solid;
   border-radius: 25px;
 }
 
@@ -221,7 +222,7 @@
   width: 1440px;
   height: 750px;
   left: 0px;
-  top: 100px;
+  top: 75px;
   border: 1px solid #000000;
   box-sizing: border-box; 
   background: url("https://s3-alpha-sig.figma.com/img/101e/5ab1/f24920a34abff94c5853975e8dc7a3ca?Expires=1643587200&Signature=bL6zvYyloo0FHxXw4S1fsLLqk~2IX~X9YxN2W~d-I2SBAz3MizU92QoH2ijwwUn4u2lO1VUBoQp9oYiiIOwhC3HaA2ypUwCiIyPPk5~I~bxjt0EEvaWp9XYaV-H5mM3GSBt3G0jDpCrsOiQw9oDs64o-3yT0UHqe0LFi3-kBEDhaWLS2pjIhDZoUh5KBuZu2XluyoscMejdsoCQHTaa8pxwYbnsxYDyL6vllLO6k3BF1QypY2l~mn6AoOJvKUqFVNAH5sqcOXUFEcCXb4z611NO41-gO9lJW7zNBiizglIgY9ZfoQv7yclB3Ba05oesyula4AXxF9llbWie1nZaOMA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")no-repeat center center fixed ;
