@@ -19,7 +19,7 @@ class CardsController < ApplicationController
     # probably will need to fix this to apply to current user
     def update
         card = find_card
-        card.update(update_params)
+        card.update!(update_params)
         render json: card
     end
 
