@@ -21,7 +21,6 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard})
 
     return (
         <div>
-            <p className="flex justify-center">click image to save</p>
             <div onClick={handleclick} className="flex justify-center">
             <div className={card.template.classname}>
                 <div className="message_render">
@@ -34,6 +33,8 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard})
                 </div>
             </div>
             </div>
+            <p className="flex justify-center">click image to save</p>
+
             <div className="form_edit_rectangle">
                 <EditCard onUpdateCard={onUpdateCard} card={card}/>
                 <button className="bg-red-600 mt-4 p-1 font-semibold rounded-sm text-sm" onClick={handleDeleteClick}>Delete Card</button>

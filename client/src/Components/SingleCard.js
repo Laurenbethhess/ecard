@@ -27,6 +27,7 @@ function SingleCard( {singleCard}) {
 
 
     return (
+        <div className="form_background">
         <div className="top">
             <div className="flex justify-center">
             <div className={singleCard.template.classname}>
@@ -43,6 +44,7 @@ function SingleCard( {singleCard}) {
             <div className="flex justify-center mt-8">
                 <button className="bg-red-100 border-solid border-2 border-red-600  rounded-lg font-semibold px-6 py-2" onClick={save} >Save</button>
             </div>
+        </div>
         </div>
         
     )
