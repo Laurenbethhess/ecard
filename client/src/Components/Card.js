@@ -21,17 +21,15 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard})
 
     return (
         <div>
-            <div onClick={handleclick}>
+            <p className="flex justify-center">click image to save</p>
+            <div onClick={handleclick} className="flex justify-center">
             <div className={card.template.classname}>
                 <div className="message_render">
                     <div>
                         <div>{card.salutation} {card.receiver},</div>
-                        <br/>
                         <div>{card.message}</div>
-                        <br/>
                         <div>{card.closing}, {card.user.first_name}</div>
                     </div>
-
                 </div>
             </div>
             </div>

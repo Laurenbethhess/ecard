@@ -50,16 +50,21 @@ function CreateCard( {onAddCard, user_id}) {
     return (
       
       <div className="form_background">
+          <div className="rose_thumb">Roses are red</div>
+          <div className="aqua_thumb">As cold as blue blazes</div>
+          <div className="green_thumb">Green vibes only</div>
+          <div className="yellow_thumb">I'm just mad about saffron</div>
+
           <div className="form_input_rectangle">
             <form className="form" onSubmit={handleSubmit}>
                 <select 
                     className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
                     onChange={(e) => setTemplateId(e.target.value)}>
                     <option>Choose template (required)</option>
-                    <option value="1">Happy Birthday</option>
-                    <option value="2">Congrats</option>
-                    <option value="3">Get Well</option>
-                    <option value="4">Love</option>
+                    <option value="1">Roses are red</option>
+                    <option value="2">As cold as blue blazes</option>
+                    <option value="3">Green vibes only</option>
+                    <option value="4">I'm just mad about saffron</option>
                 </select>
                 <br></br>
                 <select 

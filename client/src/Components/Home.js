@@ -1,36 +1,34 @@
 import React, { } from "react";
+import { Link } from "react-router-dom";
+
 
 function Home() {
 
     return (
         <div className="home_background">
-            <div className="happy_birthday_thumb"></div>
-            <div className="congrats_thumb"></div>
-            <div className="get_well_thumb"></div>
-            <div className="love_thumb"></div>
-            {/* <div className="grid grid-cols-2 justify-center gap-4" >
-                <img 
-                className="w-96 h-64 rounded-lg" 
-                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                alt="hbd"
-                />
-                 <img 
-                className="w-96 h-64 rounded-lg" 
-                src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                alt="congrats"
-                />
-                 <img 
-                className="w-96 h-64 rounded-lg" 
-                src="https://images.unsplash.com/photo-1586810164530-5b6570a84042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" 
-                alt="getwell"
-                />
-                 <img 
-                className="w-96 h-64 rounded-lg" 
-                src="https://www.creabeacards.com/wp-content/uploads/2018/01/Simple-papercut-heart-card-diagonal.jpg" 
-                alt="love"
-                />
-            </div>   */}
-        </div>
+            <div className="flex justify-center">
+                <h1 className="py-8 text-4xl font-mono font-bold italic m-6">Send love to your loved ones</h1>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
+                <div class="carousel-inner relative w-full h-96 overflow-hidden">
+                    <div class="carousel-item active relative float-left w-full">
+                    <img
+                        src="https://ak.imgag.com/imgag/product/siteassets/general/3497315/image.jpg"
+                        className="block w-full"
+                        alt="mcu1"
+                    />
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center">
+                <p className="py-8 text-1xl font-mono m-4">Get started here</p>
+            </div>
+
+            <div className="flex justify-center">
+                <Link to="/new_card"><button className="bg-red-100 border-solid border-2 border-red-600 rounded-lg font-semibold px-6 py-2">Create</button></Link>
+            </div>
+            <br/>
+        </div>    
     )
 
 }

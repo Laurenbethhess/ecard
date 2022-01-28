@@ -24,7 +24,7 @@ function Nav( {user, onSetUser}) {
             <div className="home_link"><Link to="/">Home</Link></div> */}
             <div className="flex justify-between text-lg font-mono font-semibold">
                 <div className="px-2">
-                    <p>Welcome to E-Card {user.first_name}!</p>
+                    <p>Welcome to <i>LoveNotes</i> {user.first_name}!</p>
                 </div>
                 <div className="px-2 space-x-4 float-right ">
                     <Link to="/">Home</Link>
