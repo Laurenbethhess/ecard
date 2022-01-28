@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
     # skip_before_action :authorize, only: :index
-    skip_before_action :authorize, only: :create, :update, :destroy
+    skip_before_action :authorize
 
     def index
         render json: Card.all
