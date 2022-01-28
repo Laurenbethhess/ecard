@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
     # skip_before_action :authorize, only: :index
-    skip_before_action :authorize
+    skip_before_action :authorize, only: :create, :update, :destroy
 
     def index
         render json: Card.all
@@ -16,7 +16,6 @@ class CardsController < ApplicationController
         render json: card, status: :created
     end
 
-    # probably will need to fix this to apply to current user
     def update
         card = find_card
         card.update!(update_params)
