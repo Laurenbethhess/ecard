@@ -26,7 +26,9 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard})
                 <div className="message_render">
                     <div>
                         <div>{card.salutation} {card.receiver},</div>
+                        <br/>
                         <div>{card.message}</div>
+                        <br/>
                         <div>{card.closing}</div>
                         <div>-{card.user.first_name}</div>
                     </div>

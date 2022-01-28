@@ -25,7 +25,6 @@ function SingleCard( {singleCard}) {
         });
       };
 
-
     return (
         <div className="form_background">
         <div className="top">

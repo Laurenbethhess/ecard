@@ -7,6 +7,6 @@ class Card < ApplicationRecord
   validates :closing, presence: true
   validates :receiver, presence: true
 
-  validates :message, length: { maximum: 70,
+  validates :message, length: { maximum: 75,
     too_long: "%{count} characters is the maximum allowed" }
 end
