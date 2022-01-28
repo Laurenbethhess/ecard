@@ -13,8 +13,9 @@ function SingleCard( {singleCard}) {
                 <br/>
                 <div>{singleCard.message}</div>
                 <br/>
-                <div>{singleCard.closing}, {singleCard.user.first_name}</div>
-            </div>
+                <div>{singleCard.closing}</div>
+                <div>-{singleCard.user.first_name}</div> 
+                </div>
         </div>
         const save = () => {
         doc.html(ReactDOMServer.renderToStaticMarkup(Foo), {
@@ -34,7 +35,8 @@ function SingleCard( {singleCard}) {
                     <br/>
                     <div>{singleCard.message}</div>
                     <br/>
-                    <div>{singleCard.closing}, {singleCard.user.first_name}</div>
+                    <div>{singleCard.closing}</div>
+                    <div>-{singleCard.user.first_name}</div> 
                 </div>
             </div>
             </div>

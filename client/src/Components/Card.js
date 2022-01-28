@@ -28,7 +28,8 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard, singleCard})
                     <div>
                         <div>{card.salutation} {card.receiver},</div>
                         <div>{card.message}</div>
-                        <div>{card.closing}, {card.user.first_name}</div>
+                        <div>{card.closing}</div>
+                        <div>-{card.user.first_name}</div>
                     </div>
                 </div>
             </div>

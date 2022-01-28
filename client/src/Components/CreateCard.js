@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-// -add template thumbails around the form
-
 function CreateCard( {onAddCard, user_id}) {
     const [receiver, setReceiver] = useState("")
     const [salutation, setSalutation] = useState("")
@@ -73,6 +71,7 @@ function CreateCard( {onAddCard, user_id}) {
                     <option >Choose Greeting</option>
                     <option value="Greetings">Greetings</option>
                     <option value="Hello">Hello</option>
+                    <option value="Hi">Hi</option>
                     <option value="Dear">Dear</option>
                 </select>
                 <br></br>
@@ -100,12 +99,14 @@ function CreateCard( {onAddCard, user_id}) {
                     className="border-teal p-0.5 border-t-12 bg-yellow-100 mb-1 rounded-sm shadow-lg" 
                     onChange={(e) => setClosing(e.target.value)}>
                     <option>Choose Signature</option>
-                    <option value="Love">Love</option>
-                    <option value="Yours Truly">Yours Truly</option>
-                    <option value="Sincerely">Sincerely</option>
-                    <option value="Condolences">Condolences</option>
-                    <option value="Thinking of you">Thinking of you</option>
-                    <option value="Best">Best</option>
+                    <option value="Love,">Love,</option>
+                    <option value="Yours Truly,">Yours Truly,</option>
+                    <option value="Sincerely,">Sincerely,</option>
+                    <option value="Condolences,">Condolences,</option>
+                    <option value="Thinking of you,">Thinking of you,</option>
+                    <option value="Best,">Best,</option>
+                    <option value="Thanks!">Thanks!</option>
+                    <option value="Thanks you!">Thank you!</option>
                 </select>
                 <br></br>
                 <button className="bg-green-200 mt-4 rounded-sm p-1 font-semibold" type="submit">Create Card</button>
@@ -115,12 +116,9 @@ function CreateCard( {onAddCard, user_id}) {
                 ))}
             </form>
           </div>
- 
         <br/>
       </div>
-      
     )
-
 }
 
 export default CreateCard
