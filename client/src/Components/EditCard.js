@@ -5,6 +5,8 @@ function EditCard( {onUpdateCard, card}) {
     const [message, setMessage] = useState(card.message)
     const [salutation, setSalutation] = useState(card.salutation)
     const [closing, setClosing] = useState(card.closing)
+    const [errors, setErrors] = useState([]);
+
 
     function handleUpdateCard(updatedCard) {
         onUpdateCard(updatedCard)
@@ -25,10 +27,19 @@ function EditCard( {onUpdateCard, card}) {
         closing: closing,
         }),
     })
-    .then((r) => r.json())
-    .then(updatedCard => {
-        handleUpdateCard(updatedCard)
-    })
+    // .then((r) => r.json())
+    // .then(updatedCard => {
+    //     handleUpdateCard(updatedCard)
+    // })
+    .then((r) => {
+        if (r.ok) {
+          r.json().then(updatedCard => {
+            handleUpdateCard(updatedCard)
+            })
+        } else {
+          r.json().then((err) => setErrors(err.errors));  
+        }
+      })
     }
 
     return (
@@ -75,6 +86,9 @@ function EditCard( {onUpdateCard, card}) {
                 </select>
                 <br></br>
                 <button className="bg-green-100 p-1 font-semibold rounded-sm border-green-500  text-sm hover:bg-green-500" type="submit">Submit Update</button>
+                {errors.map((err) => (
+                  <div key={err}>{err}</div>
+                ))}
             </form>
 
         </div>

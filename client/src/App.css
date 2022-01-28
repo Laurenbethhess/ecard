@@ -16,7 +16,7 @@
 .rose_thumb {
   width: 400px;
   height: 100px;
-  top: 50px;
+  top: 125px;
   left: 100px;
   position: absolute;
   border-radius: 25px;
@@ -42,7 +42,7 @@
 .aqua_thumb {
   width: 400px;
   height: 100px;
-  top: 50px;
+  top: 125px;
   left: 950px;
   position: absolute;
   border-radius: 25px;
@@ -69,7 +69,7 @@
   width: 400px;
   height: 100px;
   left: 100px;
-  top: 460px;
+  top: 325px;
   position: absolute;
   border-radius: 25px;
   background-color: #ACE1AF;
@@ -95,7 +95,7 @@
   width: 400px;
   height: 100px;
   left: 950px;
-  top: 460px;
+  top: 325px;
   position: absolute;
   border-radius: 25px;
   background-color: #F4C430;
