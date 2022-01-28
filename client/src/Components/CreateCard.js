@@ -109,8 +109,9 @@ function CreateCard( {onAddCard, user_id}) {
                 </select>
                 <br></br>
                 <button className="bg-green-200 mt-4 rounded-sm p-1 font-semibold" type="submit">Create Card</button>
+                <br/><br/><br/>
                 {errors.map((err) => (
-                  <p key={err}>{err}</p>
+                  <div key={err}>{err}</div>
                 ))}
             </form>
           </div>
