@@ -40,52 +40,7 @@ function Signup({ onLogin }) {
 
     return (
         <div className="login_box">
-          <h2 className="text-bold mt-4 mb-4">Please Sign Up</h2>
-            {/* <form onSubmit={handleSubmit}>
-                <input
-                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
-                type="text"
-                placeholder="username"
-                id="username"
-                autoComplete="off"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                />
-                <br/>
-                <input
-                className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
-                type="password"
-                placeholder="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
-                />
-                <br/>
-                <input
-                    className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
-                    type="text"
-                    placeholder="first name"
-                    id="first_name"
-                    value={firstname}
-                    onChange={(e) => setFirstName(e.target.value)}
-                />
-                <br/>
-                <input
-                    className = "border-teal p-8 border-t-12 bg-white mb-4 rounded-sm shadow-lg"
-                    type="text"
-                    placeholder="last name"
-                    id="last_name"
-                    value={lastname}
-                    onChange={(e) => setLastName(e.target.value)}
-                    autoComplete="current-password"
-                />
-                <br/>
-                <button className="bg-yellow-100 rounded-sm p-1 font-semibold" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
-                {errors.map((err) => (<p key={err}>{err}</p>))}
-            </form> */}
-
-<form className="bg-red-200 shadow-md rounded px-8 pb-8 mb-4 w-96"onSubmit={handleSubmit}>
+        <form className="bg-red-200 shadow-md rounded px-8 pb-8 mb-4 w-96"onSubmit={handleSubmit}>
             <h2 className="font-semibold pt-4">Please Sign In</h2>
             <div className="px-6 py-2">
               <input 
@@ -140,7 +95,6 @@ function Signup({ onLogin }) {
                 ))}
             </div>
           </form>
-
         </div>
     )
 }
